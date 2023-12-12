@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ----- Primary ----- */
+  --blue: hsl(246, 80%, 60%);
+  --orange: hsl(15, 100%, 70%);
+  --softBlue: hsl(195, 74%, 62%);
+  --lightRed: hsl(348, 100%, 68%);
+  --limeGreen: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --softOrange: hsl(43, 84%, 65%);
+
+  /* ----- Neutral ----- */
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturatedBlue: hsl(236, 41%, 35%);
+  --paleBlue: hsl(236, 100%, 87%);
+
+  /* ----- Text ----- */
+  --textColor: #ffffff;
+  --font: 'Rubik', sans-serif;
+
+  /* ----- Layout ----- */
+  --borderRadius: 1rem;
+  --spacing: 1.6rem;
+}
+
+body {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--veryDarkBlue);
+  line-height: 1.6;
+  font-size: 16px;
+  color: var(--textColor);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+svg {
+  max-width: 100%;
+}

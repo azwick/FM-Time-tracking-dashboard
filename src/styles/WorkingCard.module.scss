@@ -1,0 +1,123 @@
+.workingCard {
+    background-repeat: no-repeat;
+    background-position: right -0.8rem;
+    border-radius: var(--borderRadius);
+    padding-top: 2rem;
+  
+    &-content {
+      background-color: var(--darkBlue);
+      transition: 0.2s ease background-color;
+      border-radius: var(--borderRadius);
+      padding: var(--spacing);
+      line-height: 1.2;
+  
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-areas: 
+      "workTitle workMenu"
+      "workCurrentTime workPastTime";
+  
+      @media (min-width: 960px) {
+        grid-template-areas:
+            "workTitle workMenu"
+            "workCurrentTime workCurrentTime"
+            "workPastTime workPastTime";
+        grid-row-gap: 0.3rem;
+        height: 100%;
+      }
+  
+      &:hover {
+        background-color: var(--desaturatedBlue);
+      }
+  
+      &-title {
+        grid-area: workTitle;
+        align-self: center;
+      }
+      &-menu {
+        grid-area: workMenu;
+        align-self: center;
+        text-align: right;
+        cursor: pointer;
+  
+        svg > path {
+            fill: var(--paleBlue);
+            fill-rule: evenodd;
+        }
+        &:hover svg > path {
+          fill: var(--textColor);
+        }
+      }
+      &-currentTime {
+        grid-area: workCurrentTime;
+        font-size: 32px;
+        font-weight: 300;
+        align-self: center;
+  
+        @media (min-width: 960px) {
+          margin-top: 0.5rem;
+          font-size: 40px;
+        }
+      }
+      &-pastTime {
+        grid-area: workPastTime;
+        text-align: right;
+        align-self: center;
+        color: var(--paleBlue);
+  
+        @media (min-width: 960px) {
+          text-align: left;
+        }
+      }
+    }
+  
+    /* Themes */
+    &.workTheme {
+      background-color: var(--orange);
+      background-image: url('./icons/icon-work.svg');
+  
+      @media (min-width: 960px) {
+      grid-area: workCardWork;
+      }
+    }
+    &.playTheme {
+      background-color: var(--softBlue);
+      background-image: url('./icons/icon-play.svg');
+  
+      @media (min-width: 960px) {
+      grid-area: workCardPlay;
+      }
+    }
+    &.studyTheme {
+      background-color: var(--lightRed);
+      background-image: url('./icons/icon-study.svg');
+  
+      @media (min-width: 960px) {
+      grid-area: workCardStudy;
+      }
+    }
+    &.exerciseTheme {
+      background-color: var(--limeGreen);
+      background-image: url('./icons/icon-exercise.svg');
+  
+      @media (min-width: 960px) {
+      grid-area: workCardExercise;
+      }
+    }
+    &.socialTheme {
+      background-color: var(--violet);
+      background-image: url('./icons/icon-social.svg');
+  
+      @media (min-width: 960px) {
+      grid-area: workCardSocial;
+      }
+    }
+    &.selfCareTheme {
+      background-color: var(--softOrange);
+      background-image: url('./icons/icon-self-care.svg');
+  
+      @media (min-width: 960px) {
+      grid-area: workCardSelfCare;
+      }
+    }
+  }
